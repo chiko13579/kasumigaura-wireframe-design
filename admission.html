@@ -109,6 +109,279 @@
             line-height: 1;
         }
 
+        .admission-download-area {
+            position: relative;
+            padding: 48px 42px 54px;
+            margin-bottom: 54px;
+            background:
+                radial-gradient(circle at 8% 12%, rgba(53, 166, 223, 0.12), transparent 20%),
+                radial-gradient(circle at 96% 38%, rgba(53, 166, 223, 0.1), transparent 18%),
+                linear-gradient(180deg, #fbfdff 0%, #f7fbff 100%);
+            border: 1px solid #e5f1fb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .admission-download-area::before,
+        .admission-download-area::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(53, 166, 223, 0.08);
+            pointer-events: none;
+        }
+
+        .admission-download-area::before {
+            left: -60px;
+            top: 28px;
+        }
+
+        .admission-download-area::after {
+            right: -52px;
+            bottom: 180px;
+        }
+
+        .admission-design-section {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 58px;
+        }
+
+        .admission-design-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .admission-design-title {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            margin: 0 0 28px !important;
+            padding: 0 !important;
+            border: 0 !important;
+            color: #1185cf;
+            font-size: 30px !important;
+            line-height: 1.45;
+            letter-spacing: 1.4px;
+            text-align: center !important;
+        }
+
+        .admission-design-title svg {
+            width: 34px;
+            height: 34px;
+            stroke: currentColor;
+        }
+
+        .guide-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .guide-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 410px;
+            padding: 30px 28px;
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid #e4eef7;
+            border-radius: 16px;
+            box-shadow: 0 16px 34px rgba(30, 85, 130, 0.1);
+            box-sizing: border-box;
+        }
+
+        .guide-cover {
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: 170px;
+            height: 230px;
+            margin-bottom: 24px;
+            background: #fff;
+            border: 1px solid #dceaf5;
+            box-shadow: 0 12px 24px rgba(30, 85, 130, 0.12);
+            overflow: hidden;
+        }
+
+        .guide-cover::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.16), transparent 42%),
+                linear-gradient(180deg, transparent 0 60%, rgba(53, 166, 223, 0.16) 60% 100%);
+        }
+
+        .guide-cover::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-top: 58px solid rgba(53, 166, 223, 0.25);
+            border-left: 38px solid transparent;
+        }
+
+        .guide-cover-photo::before {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0 28%, transparent 28% 100%),
+                linear-gradient(135deg, rgba(53, 166, 223, 0.18), rgba(53, 166, 223, 0.04)),
+                linear-gradient(0deg, rgba(53, 166, 223, 0.16) 0 24%, transparent 24% 100%);
+        }
+
+        .guide-cover span {
+            position: relative;
+            z-index: 1;
+            color: #586b7e;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.45;
+            letter-spacing: 1.4px;
+            text-align: center;
+        }
+
+        .guide-card h3 {
+            min-height: 58px;
+            margin: 0 0 22px;
+            padding: 0;
+            border: 0;
+            color: #243242;
+            font-size: 24px;
+            line-height: 1.55;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .admission-download-btn,
+        .admission-apply-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 190px;
+            min-height: 48px;
+            padding: 0 24px;
+            border: 2px solid #9ed0f0;
+            border-radius: 999px;
+            background: #fff;
+            color: #1185cf;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 800;
+            box-sizing: border-box;
+        }
+
+        .admission-download-btn svg,
+        .admission-apply-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+        }
+
+        .document-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .document-card {
+            display: grid;
+            grid-template-columns: 116px 1fr;
+            gap: 26px;
+            align-items: center;
+            padding: 30px 36px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e4eef7;
+            border-radius: 18px;
+            box-shadow: 0 16px 34px rgba(30, 85, 130, 0.1);
+        }
+
+        .document-icon {
+            color: #78bde8;
+        }
+
+        .document-icon svg {
+            width: 82px;
+            height: 82px;
+            stroke: currentColor;
+        }
+
+        .document-card h3 {
+            margin: 0 0 8px;
+            padding: 0;
+            border: 0;
+            color: #243242;
+            font-size: 25px;
+            letter-spacing: 1.2px;
+        }
+
+        .document-card p {
+            margin: 0 0 18px;
+            color: #4d5a66;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.7;
+        }
+
+        .document-card .admission-download-btn,
+        .admission-apply-btn {
+            min-width: 210px;
+            background: linear-gradient(180deg, #1396d8 0%, #0878bf 100%);
+            border-color: #0878bf;
+            color: #fff;
+            box-shadow: 0 8px 18px rgba(17, 133, 207, 0.24);
+        }
+
+        .consultation-list {
+            padding: 20px 34px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e4eef7;
+            border-radius: 18px;
+            box-shadow: 0 16px 34px rgba(30, 85, 130, 0.1);
+        }
+
+        .consultation-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 190px 210px;
+            gap: 22px;
+            align-items: center;
+            padding: 22px 0;
+            border-bottom: 1px solid #e7eef5;
+        }
+
+        .consultation-row:last-child {
+            border-bottom: 0;
+        }
+
+        .consultation-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 24px;
+            border-radius: 999px;
+            background: #dff2ff;
+            color: #1185cf;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .consultation-date {
+            color: #243242;
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+        }
+
+        .consultation-time {
+            color: #334354;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
         @media (max-width: 700px) {
             .admission-faq-section {
                 padding: 28px 18px;
@@ -120,6 +393,35 @@
 
             .admission-faq-section .qa-item {
                 padding: 18px;
+            }
+
+            .admission-download-area {
+                padding: 32px 16px;
+            }
+
+            .admission-design-title {
+                font-size: 23px !important;
+            }
+
+            .guide-card-grid,
+            .document-card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .consultation-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                justify-items: center;
+                text-align: center;
+            }
+
+            .consultation-date {
+                font-size: 28px;
             }
         }
     </style>
@@ -276,97 +578,185 @@
                 style="position: absolute; bottom: 20px; left: 20px; font-size: 32px; font-weight: bold; color: #333; margin: 0; letter-spacing: 2px;">
                 受験情報</h1>
         </div>
-        <!-- Section 1 -->
-        <section class="course-section">
-            <h2 class="course-title" id="guide"
-                style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">学校案内・データブックのダウンロード</h2>
-            <div class="content-block center-text">
-                <div class="link-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                    <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/06/e5ae4bbd3b319b45b67ffc8ce259311b.pdf"
-                        style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;"
-                        target="_blank">■
-                        霞ヶ浦高校の様子が丸わかり資料<br>スクールガイド ２０２６</a>
-                    <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/06/ce85256ba72a0e2ca72d55f48593dea7.pdf"
-                        style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;"
-                        target="_blank">■
-                        進路指導/卒業生の進路先などの情報も掲載<br>データブック ２０２６</a>
-                    <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/a4d63b51a13ebd3de2cf783bf286f264.pdf"
-                        style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;"
-                        target="_blank">■
-                        受験の詳細は、こちら<br>令和８年度　入学試験要項</a>
+        <div class="admission-download-area">
+            <!-- Section 1 -->
+            <section class="admission-design-section">
+                <h2 class="course-title admission-design-title" id="guide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 7v14"></path>
+                        <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                    </svg>
+                    学校案内・データブックのダウンロード
+                </h2>
+                <div class="guide-card-grid">
+                    <article class="guide-card">
+                        <div class="guide-cover guide-cover-photo">
+                            <span>School<br>Guide<br>2026</span>
+                        </div>
+                        <h3>スクールガイド 2026</h3>
+                        <a class="admission-download-btn"
+                            href="https://www.kasumi.ed.jp/wp-content/uploads/2025/06/e5ae4bbd3b319b45b67ffc8ce259311b.pdf"
+                            target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3v12"></path>
+                                <path d="m7 10 5 5 5-5"></path>
+                                <path d="M5 21h14"></path>
+                            </svg>
+                            ダウンロード
+                        </a>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-cover">
+                            <span>Data<br>Book<br>2026</span>
+                        </div>
+                        <h3>データブック 2026</h3>
+                        <a class="admission-download-btn"
+                            href="https://www.kasumi.ed.jp/wp-content/uploads/2025/06/ce85256ba72a0e2ca72d55f48593dea7.pdf"
+                            target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3v12"></path>
+                                <path d="m7 10 5 5 5-5"></path>
+                                <path d="M5 21h14"></path>
+                            </svg>
+                            ダウンロード
+                        </a>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-cover">
+                            <span>令和8年度<br>入学試験<br>要項</span>
+                        </div>
+                        <h3>令和8年度<br>入学試験要項</h3>
+                        <a class="admission-download-btn"
+                            href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/a4d63b51a13ebd3de2cf783bf286f264.pdf"
+                            target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3v12"></path>
+                                <path d="m7 10 5 5 5-5"></path>
+                                <path d="M5 21h14"></path>
+                            </svg>
+                            ダウンロード
+                        </a>
+                    </article>
                 </div>
-            </div>
-        </section>
-        <hr />
-        <!-- Section 3 -->
-        <section class="course-section">
-            <h2 class="course-title" id="documents"
-                style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">入試関係書類</h2>
-            <div class="content-block center-text">
-                <div class="link-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                    <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/4f8e1cd2405eed5d204ed3280cb20159.xlsx"
-                        style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;"
-                        target="_blank">■
-                        推薦書</a>
-                    <a href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/20af271b900571542c8b579a7b09ba65.xlsx"
-                        style="padding: 20px; font-weight: bold; border: 2px solid #ddd; background: #fff; color: #333; text-decoration: none; display: block; border-radius: 4px;"
-                        target="_blank">■
-                        調査書</a>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="admission-design-section">
+                <h2 class="course-title admission-design-title" id="documents">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <path d="M14 2v6h6"></path>
+                        <path d="M9 15h6"></path>
+                        <path d="M9 18h4"></path>
+                    </svg>
+                    入試関係書類
+                </h2>
+                <div class="document-card-grid">
+                    <article class="document-card">
+                        <span class="document-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <path d="M14 2v6h6"></path>
+                                <path d="M8 13h8"></path>
+                                <path d="M8 17h5"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>推薦書</h3>
+                            <p>推薦入試を受験する方は、こちらの様式をご利用ください。</p>
+                            <a class="admission-download-btn"
+                                href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/4f8e1cd2405eed5d204ed3280cb20159.xlsx"
+                                target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 3v12"></path>
+                                    <path d="m7 10 5 5 5-5"></path>
+                                    <path d="M5 21h14"></path>
+                                </svg>
+                                ダウンロード
+                            </a>
+                        </div>
+                    </article>
+                    <article class="document-card">
+                        <span class="document-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <path d="M14 2v6h6"></path>
+                                <path d="M9 12h6"></path>
+                                <path d="M9 16h6"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>調査書</h3>
+                            <p>一般入試を受験する方は、こちらの様式をご利用ください。</p>
+                            <a class="admission-download-btn"
+                                href="https://www.kasumi.ed.jp/wp-content/uploads/2025/10/20af271b900571542c8b579a7b09ba65.xlsx"
+                                target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 3v12"></path>
+                                    <path d="m7 10 5 5 5-5"></path>
+                                    <path d="M5 21h14"></path>
+                                </svg>
+                                ダウンロード
+                            </a>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </section>
-        <hr />
-        <!-- Section 4 -->
-        <section class="course-section">
-            <h2 class="course-title" id="consultation"
-                style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">2025年度　個別相談会日程</h2>
-            <div class="content-block">
-                <table
-                    style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left; font-size: 1.1em;">
-                    <thead>
-                        <tr style="background-color: #fff; border-bottom: 2px solid #999;">
-                            <th style="padding: 15px;">開催日</th>
-                            <th style="padding: 15px;">時間</th>
-                            <th style="padding: 15px;">お申し込み</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 15px;">【第1回】　11月26日（水）</td>
-                            <td style="padding: 15px;">17:00～19:00</td>
-                            <td style="padding: 15px;">
-                                <a href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
-                                    style="display: inline-block; padding: 10px 20px; background: #666; color: #fff; text-decoration: none; font-weight: bold; border-radius: 4px;"
-                                    target="_blank">お申し込み</a>
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd; background-color: #fcfcfc;">
-                            <td style="padding: 15px;">【第2回】　11月27日（木）</td>
-                            <td style="padding: 15px;">17:00～19:00</td>
-                            <td style="padding: 15px;">
-                                <a href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
-                                    style="display: inline-block; padding: 10px 20px; background: #666; color: #fff; text-decoration: none; font-weight: bold; border-radius: 4px;"
-                                    target="_blank">お申し込み</a>
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 15px;">【第3回】　11月28日（金）</td>
-                            <td style="padding: 15px;">17:00～19:00</td>
-                            <td style="padding: 15px;">
-                                <a href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
-                                    style="display: inline-block; padding: 10px 20px; background: #666; color: #fff; text-decoration: none; font-weight: bold; border-radius: 4px;"
-                                    target="_blank">お申し込み</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+            </section>
+
+            <!-- Section 4 -->
+            <section class="admission-design-section">
+                <h2 class="course-title admission-design-title" id="consultation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                        <path d="M16 2v4"></path>
+                        <path d="M8 2v4"></path>
+                        <path d="M3 10h18"></path>
+                        <path d="M8 14h.01"></path>
+                        <path d="M12 14h.01"></path>
+                        <path d="M16 14h.01"></path>
+                    </svg>
+                    2025年度 個別相談会日程
+                </h2>
+                <div class="consultation-list">
+                    <div class="consultation-row">
+                        <span class="consultation-badge">第1回</span>
+                        <span class="consultation-date">11月26日（水）</span>
+                        <span class="consultation-time">17:00〜19:00</span>
+                        <a class="admission-apply-btn" href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
+                            target="_blank">お申し込み <span aria-hidden="true">›</span></a>
+                    </div>
+                    <div class="consultation-row">
+                        <span class="consultation-badge">第2回</span>
+                        <span class="consultation-date">11月27日（木）</span>
+                        <span class="consultation-time">17:00〜19:00</span>
+                        <a class="admission-apply-btn" href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
+                            target="_blank">お申し込み <span aria-hidden="true">›</span></a>
+                    </div>
+                    <div class="consultation-row">
+                        <span class="consultation-badge">第3回</span>
+                        <span class="consultation-date">11月28日（金）</span>
+                        <span class="consultation-time">17:00〜19:00</span>
+                        <a class="admission-apply-btn" href="https://mirai-compass.net/usr/kasumih/event/evtIndex.jsf"
+                            target="_blank">お申し込み <span aria-hidden="true">›</span></a>
+                    </div>
+                </div>
+                <p style="margin: 18px 0 0; color: #4d5a66; font-size: 0.95em; line-height: 1.8;">
                     詳細に関しましては本校へお問い合わせください。<br />
                     【電話番号】029-887-0013/4755<br />
                     ※日程が変更となる場合がございます。
                 </p>
-            </div>
-        </section>
+            </section>
+        </div>
         <hr />
         <!-- Section 5 -->
         <section class="course-section admission-faq-section">
