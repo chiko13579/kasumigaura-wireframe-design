@@ -9,6 +9,12 @@
     <title></title>
     <link href="style.css?v=2" rel="stylesheet" />
     <style>
+        main.container,
+        .quick-nav-container,
+        .footer-container {
+            box-sizing: border-box;
+        }
+
         .history-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -54,6 +60,53 @@
             font-size: 0.9em;
             line-height: 1.5;
             color: #444;
+        }
+
+        .principal-title-band {
+            display: grid;
+            place-items: center;
+            gap: 8px;
+            width: 100%;
+            min-height: 170px;
+            margin: 0 0 34px;
+            padding: 30px 24px 34px;
+            background: #35a6df;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .principal-title-band span {
+            display: block;
+            color: #ffe36b;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 4px;
+        }
+
+        .principal-title-band h2 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: #fff;
+            font-size: 70px;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: 6px;
+        }
+
+        .about-policy-placeholder {
+            width: 420px;
+            flex-shrink: 0;
+            background: #ccc;
+            min-height: 480px;
+        }
+
+        .about-policy-layout {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            margin-bottom: 40px;
         }
 
         .principal-profile {
@@ -308,6 +361,31 @@
         }
 
         @media (max-width: 800px) {
+            .principal-title-band {
+                min-height: 126px;
+                padding: 24px 18px 28px;
+            }
+
+            .principal-title-band span {
+                font-size: 28px;
+                letter-spacing: 2.5px;
+            }
+
+            .principal-title-band h2 {
+                font-size: 46px;
+                letter-spacing: 3px;
+            }
+
+            .about-policy-placeholder {
+                width: 100%;
+                min-height: 260px;
+            }
+
+            .about-policy-layout {
+                flex-direction: column;
+                gap: 28px;
+            }
+
             .history-list {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -500,7 +578,10 @@
                 校長紹介・学校沿革</h1>
         </div>
         <section class="course-section" id="principal-history">
-            <h2 class="course-title" id="history">校長紹介</h2>
+            <div class="principal-title-band" id="history">
+                <span>Headteacher</span>
+                <h2>校長紹介</h2>
+            </div>
             <div class="content-block principal-profile">
                 <div class="principal-profile-top">
                     <div class="principal-photo-card">
@@ -664,7 +745,7 @@
                 </div>
             </div>
             <div class="content-block">
-                <div style="display: flex; gap: 60px; align-items: flex-start; margin-bottom: 40px;">
+                <div class="about-policy-layout">
                     <!-- 左：テキスト -->
                     <div style="flex: 1; line-height: 2;">
                         <h3>「夢のStart Line」</h3>
@@ -696,7 +777,7 @@
                         </p>
                     </div>
                     <!-- 右：写真プレースホルダー -->
-                    <div style="width: 420px; flex-shrink: 0; background: #ccc; min-height: 480px;"></div>
+                    <div class="about-policy-placeholder"></div>
                 </div>
 
                 <!-- 今のテキストはいただいたテキスト
