@@ -24,6 +24,115 @@
             line-height: 1.2;
             letter-spacing: 1.4px;
         }
+
+        .career-grade-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 42px 0 22px;
+        }
+
+        .career-grade-card {
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #dcecf7;
+            border-radius: 14px;
+        }
+
+        .career-grade-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 96px;
+            padding: 24px 28px;
+            background: #eef8ff;
+            color: #1b62bc;
+        }
+
+        .career-grade-header h3 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: inherit;
+            font-size: 26px;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        .career-grade-icon {
+            width: 58px;
+            height: 58px;
+            color: #7cbdeb;
+        }
+
+        .career-grade-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: currentColor;
+        }
+
+        .career-guidance-list {
+            margin: 0;
+            padding: 30px 30px 36px;
+            list-style: none;
+        }
+
+        .career-guidance-list li {
+            position: relative;
+            margin: 0 0 18px;
+            padding-left: 22px;
+            color: #334354;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.65;
+        }
+
+        .career-guidance-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .career-guidance-list li::before {
+            content: "";
+            position: absolute;
+            top: 0.8em;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1d78cf;
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            .career-grade-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .career-grade-header {
+                min-height: 78px;
+                padding: 20px 22px;
+            }
+
+            .career-grade-header h3 {
+                font-size: 22px;
+            }
+
+            .career-grade-icon {
+                width: 46px;
+                height: 46px;
+            }
+
+            .career-guidance-list {
+                padding: 24px 22px 28px;
+            }
+
+            .career-guidance-list li {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -201,74 +310,81 @@
 
 
             </div>
-            <div class="grade-guidance-container">
-
-                <!-- 1年次 -->
-                <div class="two-column" style="align-items: center; margin-bottom: 60px;">
-                    <div class="column">
-                        <div class="image-placeholder" style="height: 320px;"></div>
+            <div class="grade-guidance-container career-grade-grid">
+                <article class="career-grade-card">
+                    <div class="career-grade-header">
+                        <h3>1年次</h3>
+                        <span class="career-grade-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+                                <path d="m15 5 3 3"></path>
+                            </svg>
+                        </span>
                     </div>
-                    <div class="column">
-                        <h4 style="text-align: center; font-size: 1.5em; margin-bottom: 20px; color: #333;">1年次</h4>
-                        <ul class="guidance-list" style="margin-bottom: 0;">
-                            <li style="padding: 10px 0;">上級学校ガイダンス（大学・専門）</li>
-                            <li style="padding: 10px 0;">國學院大學見学会</li>
-                            <li style="padding: 10px 0;">文理選択講話、科目選択講話</li>
-                            <li style="padding: 10px 0;">各コース集会</li>
-                            <li style="padding: 10px 0;">進路希望調査</li>
-                            <li style="padding: 10px 0;">外部進路イベント参加</li>
-                            <li style="padding: 10px 0;">クラス別個別面談</li>
-                            <li style="padding: 10px 0;">コース別補習講座</li>
-                        </ul>
-                    </div>
-                </div>
+                    <ul class="career-guidance-list">
+                        <li>上級学校ガイダンス（大学・専門）</li>
+                        <li>國學院大學見学会</li>
+                        <li>文理選択講話、科目選択講話</li>
+                        <li>各コース集会</li>
+                        <li>進路希望調査</li>
+                        <li>外部進路イベント参加</li>
+                        <li>クラス別個別面談</li>
+                        <li>コース別補習講座</li>
+                    </ul>
+                </article>
 
-                <hr style="border: 0; border-top: 2px solid #ddd; margin: 0 0 60px;" />
-
-                <!-- 2年次 -->
-                <div class="two-column" style="align-items: center; margin-bottom: 60px;">
-                    <div class="column" style="order: 2;">
-                        <div class="image-placeholder" style="height: 320px;"></div>
+                <article class="career-grade-card">
+                    <div class="career-grade-header">
+                        <h3>2年次</h3>
+                        <span class="career-grade-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 7v14"></path>
+                                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                                <path d="M17 8h2"></path>
+                                <path d="M17 12h2"></path>
+                            </svg>
+                        </span>
                     </div>
-                    <div class="column" style="order: 1;">
-                        <h4 style="text-align: center; font-size: 1.5em; margin-bottom: 20px; color: #333;">2年次</h4>
-                        <ul class="guidance-list" style="margin-bottom: 0;">
-                            <li style="padding: 10px 0;">大学・専門学校の出張模擬授業</li>
-                            <li style="padding: 10px 0;">大学・専門学校・企業のバス見学会</li>
-                            <li style="padding: 10px 0;">志望理由書書き方講話</li>
-                            <li style="padding: 10px 0;">進路講話</li>
-                            <li style="padding: 10px 0;">公務員講座</li>
-                            <li style="padding: 10px 0;">各コース集会</li>
-                            <li style="padding: 10px 0;">希望進路別集会</li>
-                            <li style="padding: 10px 0;">大学、専門学校オープンキャンパス等参加</li>
-                            <li style="padding: 10px 0;">コース別補習講座</li>
-                            <li style="padding: 10px 0;">就職希望者インターンシップ</li>
-                        </ul>
-                    </div>
-                </div>
+                    <ul class="career-guidance-list">
+                        <li>大学・専門学校の出張模擬授業</li>
+                        <li>大学・専門学校・企業のバス見学会</li>
+                        <li>志望理由書書き方講話</li>
+                        <li>進路講話</li>
+                        <li>公務員講座</li>
+                        <li>各コース集会</li>
+                        <li>希望進路別集会</li>
+                        <li>大学、専門学校オープンキャンパス等参加</li>
+                        <li>コース別補習講座</li>
+                        <li>就職希望者インターンシップ</li>
+                    </ul>
+                </article>
 
-                <hr style="border: 0; border-top: 2px solid #ddd; margin: 0 0 60px;" />
-
-                <!-- 3年次 -->
-                <div class="two-column" style="align-items: center; margin-bottom: 20px;">
-                    <div class="column">
-                        <div class="image-placeholder" style="height: 320px;"></div>
+                <article class="career-grade-card">
+                    <div class="career-grade-header">
+                        <h3>3年次</h3>
+                        <span class="career-grade-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 10 12 5 2 10l10 5 10-5Z"></path>
+                                <path d="M6 12v5c3 2 9 2 12 0v-5"></path>
+                                <path d="M22 10v6"></path>
+                            </svg>
+                        </span>
                     </div>
-                    <div class="column">
-                        <h4 style="text-align: center; font-size: 1.5em; margin-bottom: 20px; color: #333;">3年次</h4>
-                        <ul class="guidance-list" style="margin-bottom: 0;">
-                            <li style="padding: 10px 0;">希望進路別説明会</li>
-                            <li style="padding: 10px 0;">大学・専門学校オープンキャンパス等参加</li>
-                            <li style="padding: 10px 0;">合同進学相談会参加（外部会場）</li>
-                            <li style="padding: 10px 0;">企業見学会（就職希望者）</li>
-                            <li style="padding: 10px 0;">分野別志望理由書指導</li>
-                            <li style="padding: 10px 0;">大学別個別指導会（大学側による直接指導）</li>
-                            <li style="padding: 10px 0;">受験方法別個別指導（総合型、推薦型、一般）</li>
-                            <li style="padding: 10px 0;">コース別補習講座</li>
-                        </ul>
-                    </div>
-                </div>
-
+                    <ul class="career-guidance-list">
+                        <li>希望進路別説明会</li>
+                        <li>大学・専門学校オープンキャンパス等参加</li>
+                        <li>合同進学相談会参加（外部会場）</li>
+                        <li>企業見学会（就職希望者）</li>
+                        <li>分野別志望理由書指導</li>
+                        <li>大学別個別指導会（大学側による直接指導）</li>
+                        <li>受験方法別個別指導（総合型、推薦型、一般）</li>
+                        <li>コース別補習講座</li>
+                    </ul>
+                </article>
             </div>
             <p style="font-size: 0.9em; color: #666; margin-top: 15px;">※各学年ともHRの時間を利用して、進路に対するガイダンスや面談を行っています。</p>
         </section>
