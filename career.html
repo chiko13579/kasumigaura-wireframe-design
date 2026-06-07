@@ -33,10 +33,22 @@
         }
 
         .career-grade-card {
+            --grade-color: #2183b8;
+            --grade-photo-bg: #eef8ff;
             overflow: hidden;
             background: #fff;
             border: 1px solid #dcecf7;
             border-radius: 14px;
+        }
+
+        .career-grade-card:nth-child(2) {
+            --grade-color: #70b96a;
+            --grade-photo-bg: #f3fbf0;
+        }
+
+        .career-grade-card:nth-child(3) {
+            --grade-color: #35a6df;
+            --grade-photo-bg: #eff9ff;
         }
 
         .career-grade-header {
@@ -45,8 +57,8 @@
             justify-content: space-between;
             min-height: 96px;
             padding: 24px 28px;
-            background: #eef8ff;
-            color: #1b62bc;
+            background: var(--grade-color);
+            color: #fff;
         }
 
         .career-grade-header h3 {
@@ -62,13 +74,28 @@
         .career-grade-icon {
             width: 58px;
             height: 58px;
-            color: #7cbdeb;
+            color: rgba(255, 255, 255, 0.82);
         }
 
         .career-grade-icon svg {
             width: 100%;
             height: 100%;
             stroke: currentColor;
+        }
+
+        .career-grade-photo {
+            height: 190px;
+            margin: 0;
+            background: var(--grade-photo-bg);
+            border-bottom: 1px solid #dcecf7;
+            overflow: hidden;
+        }
+
+        .career-grade-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
         }
 
         .career-guidance-list {
@@ -99,7 +126,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #1d78cf;
+            background: var(--grade-color);
             transform: translateY(-50%);
         }
 
@@ -123,6 +150,10 @@
             .career-grade-icon {
                 width: 46px;
                 height: 46px;
+            }
+
+            .career-grade-photo {
+                height: 170px;
             }
 
             .career-guidance-list {
@@ -323,6 +354,9 @@
                             </svg>
                         </span>
                     </div>
+                    <figure class="career-grade-photo">
+                        <img src="img/interview.jpg" alt="進路面談の様子">
+                    </figure>
                     <ul class="career-guidance-list">
                         <li>上級学校ガイダンス（大学・専門）</li>
                         <li>國學院大學見学会</li>
@@ -348,6 +382,9 @@
                             </svg>
                         </span>
                     </div>
+                    <figure class="career-grade-photo">
+                        <img src="img/facility.jpg" alt="校内施設と授業風景">
+                    </figure>
                     <ul class="career-guidance-list">
                         <li>大学・専門学校の出張模擬授業</li>
                         <li>大学・専門学校・企業のバス見学会</li>
@@ -374,6 +411,9 @@
                             </svg>
                         </span>
                     </div>
+                    <figure class="career-grade-photo">
+                        <img src="img/uniform.jpg" alt="霞ヶ浦高等学校の生徒">
+                    </figure>
                     <ul class="career-guidance-list">
                         <li>希望進路別説明会</li>
                         <li>大学・専門学校オープンキャンパス等参加</li>
