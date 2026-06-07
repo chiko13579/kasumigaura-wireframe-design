@@ -242,6 +242,23 @@
             font-weight: 800;
         }
 
+        .principal-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #35a6df;
+            color: #fff;
+        }
+
+        .principal-check svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+        }
+
         .memory-item p {
             margin: 0;
             color: #344252;
@@ -282,6 +299,12 @@
             width: 48px;
             height: 48px;
             stroke: #35a6df;
+        }
+
+        .vision-card .principal-check svg {
+            width: 22px;
+            height: 22px;
+            stroke: #fff;
         }
 
         @media (max-width: 800px) {
@@ -594,7 +617,12 @@
                 </div>
                 <div class="vision-grid">
                     <div class="vision-card">
-                        <span class="principal-number">01</span>
+                        <span class="principal-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m20 6-11 11-5-5"></path>
+                            </svg>
+                        </span>
                         <p>信頼と伝統を礎に、<br>地域に愛される学校</p>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -603,7 +631,12 @@
                         </svg>
                     </div>
                     <div class="vision-card">
-                        <span class="principal-number">02</span>
+                        <span class="principal-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m20 6-11 11-5-5"></path>
+                            </svg>
+                        </span>
                         <p>生徒一人ひとりを大切にし、<br>誰一人取り残さない学校</p>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -616,7 +649,12 @@
                         </svg>
                     </div>
                     <div class="vision-card">
-                        <span class="principal-number">03</span>
+                        <span class="principal-check" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m20 6-11 11-5-5"></path>
+                            </svg>
+                        </span>
                         <p>学びを楽しみ、探究によって<br>“とんがる”学校</p>
                         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
