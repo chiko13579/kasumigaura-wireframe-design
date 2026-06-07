@@ -8,52 +8,95 @@
     <title>卒業生の声 | 霞ヶ浦高等学校</title>
     <link href="style.css?v=2" rel="stylesheet" />
     <style>
+        main.container,
+        .quick-nav-container,
+        .footer-container {
+            box-sizing: border-box;
+        }
+
+        .interview-title-band {
+            display: grid;
+            place-items: center;
+            gap: 8px;
+            width: 100%;
+            min-height: 190px;
+            margin: 0 0 48px;
+            padding: 34px 24px 38px;
+            background: #35a6df;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .interview-title-band span {
+            display: block;
+            color: #ffe36b;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 4px;
+        }
+
+        .interview-title-band h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: #fff;
+            font-size: 70px;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: 6px;
+        }
+
         /* ============================================================
            タブナビゲーション
         ============================================================ */
         .interview-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 54px;
             padding-bottom: 0;
         }
 
         .interview-tab-btn {
-            display: flex;
+            display: grid;
+            grid-template-columns: 58px 1fr;
             align-items: center;
             gap: 14px;
-            padding: 16px 24px;
+            min-height: 96px;
+            padding: 16px 18px;
             background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 2px;
+            border: 1px solid #dcecf7;
+            border-radius: 0;
             cursor: pointer;
-            color: #999;
-            transition: all 0.25s;
+            color: #536273;
+            transition: border-color 0.25s, background-color 0.25s;
             text-align: left;
             position: relative;
+            overflow: hidden;
         }
 
         .interview-tab-btn::after {
             content: '';
             position: absolute;
-            bottom: -1px;
+            bottom: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: #111;
+            height: 4px;
+            background: #35a6df;
             transform: scaleX(0);
             transition: transform 0.25s;
         }
 
         .interview-tab-btn:hover {
-            border-color: #999;
-            color: #333;
+            border-color: #9bd3f2;
+            color: #243242;
         }
 
         .interview-tab-btn.active {
-            border-color: #111;
-            color: #111;
+            border-color: #35a6df;
+            background: #f4fbff;
+            color: #243242;
         }
 
         .interview-tab-btn.active::after {
@@ -61,11 +104,47 @@
         }
 
         .tab-thumb {
-            width: 48px;
-            height: 48px;
+            width: 58px;
+            height: 58px;
             border-radius: 50%;
-            background-color: #e0e0e0;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.24), rgba(255, 255, 255, 0.7)),
+                #eaf6fd;
+            border: 1px solid #c9e8f8;
             flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tab-thumb::before {
+            content: "";
+            position: absolute;
+            inset: 13px 16px 0;
+            border: 2px solid #8ac8ee;
+            border-bottom: 0;
+            border-radius: 999px 999px 0 0;
+        }
+
+        .tab-thumb::after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #8ac8ee;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            background: #f7fcff;
+        }
+
+        .tab-thumb.has-photo {
+            background: url("img/interview.jpg") center / cover no-repeat;
+        }
+
+        .tab-thumb.has-photo::before,
+        .tab-thumb.has-photo::after {
+            display: none;
         }
 
         .tab-info {
@@ -76,15 +155,17 @@
 
         .tab-name {
             font-size: 1em;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 1px;
+            color: #243242;
         }
 
         .tab-course {
             font-size: 0.72em;
-            font-weight: normal;
-            color: #aaa;
+            font-weight: 500;
+            color: #6c7b88;
             letter-spacing: 1px;
+            line-height: 1.5;
         }
 
         .interview-tab-btn.active .tab-course {
@@ -107,40 +188,82 @@
         ============================================================ */
         .interview-hero {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
             gap: 0;
-            margin-bottom: 70px;
-            border: 1px solid #e8e8e8;
+            margin-bottom: 46px;
+            border: 1px solid #dcecf7;
             overflow: hidden;
+            background: #fff;
         }
 
         .interview-hero-photo {
-            height: 460px;
-            background-color: #ddd;
+            min-height: 430px;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.18), rgba(255, 255, 255, 0.48)),
+                #edf8ff;
+            position: relative;
+        }
+
+        .interview-hero-photo.has-photo {
+            background: url("img/interview.jpg") center / cover no-repeat;
+        }
+
+        .interview-hero-photo:not(.has-photo)::before,
+        .qa-photo::before,
+        .photo-divider::before,
+        .photo-pair .image-placeholder::before {
+            content: "PHOTO";
+            position: absolute;
+            left: 20px;
+            bottom: 18px;
+            color: #8ac8ee;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .interview-hero-photo:not(.has-photo)::after,
+        .qa-photo::after,
+        .photo-divider::after,
+        .photo-pair .image-placeholder::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 92px;
+            height: 92px;
+            border: 3px solid #9bd3f2;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.65;
         }
 
         .interview-hero-info {
-            padding: 50px 44px;
-            background-color: #fafafa;
+            padding: 54px 48px;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.88), #fff),
+                #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .interview-hero-label {
-            font-size: 0.72em;
-            letter-spacing: 4px;
-            color: #aaa;
-            margin-bottom: 10px;
+            font-size: 0.76em;
+            letter-spacing: 3px;
+            color: #35a6df;
+            margin-bottom: 14px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .interview-hero-name {
-            font-size: 2.4em;
-            font-weight: bold;
-            letter-spacing: 4px;
+            font-size: 2.8em;
+            font-weight: 800;
+            letter-spacing: 3px;
             margin: 0 0 6px;
             line-height: 1.2;
+            color: #243242;
         }
 
         .interview-hero-name-en {
@@ -156,9 +279,10 @@
             font-size: 0.8em;
             letter-spacing: 2px;
             color: #fff;
-            background-color: #333;
-            padding: 5px 14px;
+            background-color: #35a6df;
+            padding: 7px 16px;
             margin-bottom: 30px;
+            width: max-content;
         }
 
         .interview-hero-dest {
@@ -181,94 +305,117 @@
         ============================================================ */
         .qa-section {
             margin-bottom: 20px;
+            border-top: 1px solid #dcecf7;
         }
 
         /* 通常ブロック：Q. ラベル + テキスト */
         .qa-block {
             display: grid;
-            grid-template-columns: 70px 1fr;
-            gap: 0 24px;
-            padding: 44px 0;
-            border-top: 1px solid #eee;
+            grid-template-columns: 54px 1fr;
+            gap: 0 22px;
+            padding: 34px 0;
+            border-top: 0;
+            border-bottom: 1px solid #e6eef5;
         }
 
         .qa-block:last-of-type {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e6eef5;
         }
 
         .qa-label {
-            font-size: 2.8em;
-            font-weight: bold;
-            color: #e0e0e0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #35a6df;
+            color: #fff;
+            font-size: 0.9em;
+            font-weight: 700;
             line-height: 1;
-            padding-top: 4px;
-            letter-spacing: -1px;
-            font-family: Georgia, serif;
+            letter-spacing: 0;
+            font-family: inherit;
         }
 
         .qa-question {
-            font-size: 1em;
-            font-weight: bold;
+            font-size: 1.08em;
+            font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 16px;
-            color: #111;
+            margin: 0 0 12px;
+            color: #243242;
             line-height: 1.6;
         }
 
         .qa-answer {
             font-size: 0.96em;
             line-height: 2;
-            color: #444;
+            color: #4d5a66;
         }
 
         /* テキスト＋写真 横並びブロック */
         .qa-with-photo {
             display: grid;
             gap: 0 24px;
-            padding: 44px 0;
-            border-top: 1px solid #eee;
+            padding: 34px 0;
+            border-top: 0;
+            border-bottom: 1px solid #e6eef5;
             align-items: start;
         }
 
         .qa-with-photo:last-of-type {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e6eef5;
         }
 
         /* テキスト左・写真右 */
         .qa-with-photo.text-left {
-            grid-template-columns: 70px 1fr 340px;
+            grid-template-columns: 54px 1fr 320px;
         }
 
         /* 写真左・テキスト右（Q.ラベルはテキスト内） */
         .qa-with-photo.photo-left {
-            grid-template-columns: 340px 70px 1fr;
+            grid-template-columns: 320px 54px 1fr;
         }
 
         .qa-with-photo .qa-photo {
-            height: 280px;
-            background-color: #ddd;
+            height: 260px;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.12), rgba(255, 227, 107, 0.14)),
+                #f4fbff;
+            border: 1px solid #dcecf7;
+            position: relative;
         }
 
         /* 全幅写真区切り */
         .photo-divider {
             width: 100%;
-            height: 320px;
-            margin: 10px 0;
-            background-color: #ddd;
+            height: 280px;
+            margin: 0;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.12), rgba(255, 227, 107, 0.14)),
+                #f4fbff;
+            border: 1px solid #dcecf7;
+            box-sizing: border-box;
+            position: relative;
         }
 
         /* 写真2枚横並び */
         .photo-pair {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin: 10px 0 44px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 44px;
+            gap: 14px;
+            margin: 0 0 44px;
+            border-bottom: 1px solid #e6eef5;
+            padding: 28px 0 44px;
         }
 
         .photo-pair .image-placeholder {
-            height: 240px;
+            height: 220px;
+            background:
+                linear-gradient(135deg, rgba(53, 166, 223, 0.12), rgba(255, 227, 107, 0.14)),
+                #f4fbff;
+            border: 1px solid #dcecf7;
+            position: relative;
         }
 
         /* ============================================================
@@ -294,10 +441,10 @@
             font-size: 1.05em;
             line-height: 2;
             color: #444;
-            background: #f7f7f7;
+            background: #f4fbff;
             padding: 30px 34px;
             margin-bottom: 50px;
-            border-left: 4px solid #111;
+            border-left: 4px solid #35a6df;
             font-style: italic;
         }
 
@@ -326,11 +473,31 @@
            レスポンシブ
         ============================================================ */
         @media (max-width: 768px) {
+            .interview-title-band {
+                min-height: 132px;
+                padding: 24px 18px 28px;
+            }
+
+            .interview-title-band span {
+                font-size: 28px;
+                letter-spacing: 2.5px;
+            }
+
+            .interview-title-band h1 {
+                font-size: 46px;
+                letter-spacing: 3px;
+            }
+
+            .interview-tabs {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
             .interview-hero {
                 grid-template-columns: 1fr;
             }
             .interview-hero-photo {
-                height: 280px;
+                min-height: 260px;
             }
             .interview-hero-info {
                 padding: 32px 24px;
@@ -346,17 +513,44 @@
                 height: 160px;
             }
             .qa-block {
-                grid-template-columns: 50px 1fr;
+                grid-template-columns: 42px 1fr;
+                gap: 14px;
+                padding: 28px 0;
             }
             .qa-label {
-                font-size: 2em;
+                width: 34px;
+                height: 34px;
+                font-size: 0.78em;
             }
             .interview-tab-btn {
-                padding: 12px 16px;
+                grid-template-columns: 42px 1fr;
+                min-height: 84px;
+                padding: 12px 10px;
+                gap: 10px;
             }
             .tab-thumb {
-                width: 36px;
-                height: 36px;
+                width: 42px;
+                height: 42px;
+            }
+
+            .tab-thumb::before {
+                inset: 11px 12px 0;
+            }
+
+            .tab-thumb::after {
+                top: 10px;
+                width: 12px;
+                height: 12px;
+            }
+
+            .tab-name {
+                font-size: 0.88em;
+                letter-spacing: 0.4px;
+            }
+
+            .tab-course {
+                font-size: 0.66em;
+                letter-spacing: 0;
             }
         }
     </style>
@@ -483,19 +677,15 @@
 
     <main class="container">
 
-        <!-- ページヘッダー -->
-        <div style="position: relative; width: 100%; height: 400px; background-color: #ccc; margin-bottom: 60px; overflow: hidden;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 60%);"></div>
-            <div style="position: absolute; bottom: 40px; left: 40px;">
-                <p style="font-size: 0.75em; letter-spacing: 5px; color: rgba(255,255,255,0.7); margin: 0 0 10px; text-transform: uppercase;">Graduate Voice</p>
-                <h1 style="font-size: 2.4em; font-weight: bold; color: #fff; margin: 0; letter-spacing: 3px; line-height: 1.2;">卒業生の声</h1>
-            </div>
+        <div class="interview-title-band">
+            <span>Graduate Voice</span>
+            <h1>卒業生の声</h1>
         </div>
 
         <!-- タブ -->
         <div class="interview-tabs">
             <button class="interview-tab-btn active" data-tab="ohkubo">
-                <div class="tab-thumb"></div>
+                <div class="tab-thumb has-photo"></div>
                 <div class="tab-info">
                     <span class="tab-name">大久保 陽斗さん</span>
                     <span class="tab-course">特進選抜コース → 茨城大学</span>
@@ -528,7 +718,7 @@
         <!-- ========== 大久保 陽斗 ========== -->
         <div class="interview-panel active" id="panel-ohkubo">
             <div class="interview-hero">
-                <div class="interview-hero-photo image-placeholder"></div>
+                <div class="interview-hero-photo has-photo"></div>
                 <div class="interview-hero-info">
                     <p class="interview-hero-label">Graduate Voice — 01</p>
                     <h2 class="interview-hero-name">大久保 陽斗<span style="font-size:0.5em; font-weight:normal; letter-spacing:2px; color:#aaa;">さん</span></h2>
