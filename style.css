@@ -1,4 +1,19 @@
 /* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
     color: #222;
@@ -7,6 +22,7 @@ body {
     padding: 0;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -111,6 +127,16 @@ nav button:hover,
 nav button.active {
     background-color: #f0f0f0;
     color: #111;
+}
+
+.title-en {
+    display: block;
+    margin-bottom: 6px;
+    color: #35a6df;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1.4px;
 }
 
 /* Layout Components */
@@ -2024,6 +2050,7 @@ h5#danraku5 {
 .form-group select,
 .form-group textarea {
     width: 100%;
+    max-width: 100%;
     padding: 12px 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -2034,6 +2061,14 @@ h5#danraku5 {
 
 .form-group textarea {
     resize: vertical;
+}
+
+@media (max-width: 600px) {
+    .form-group input[name="cert_other_name"] {
+        display: block;
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
 }
 
 .form-group input:focus,
