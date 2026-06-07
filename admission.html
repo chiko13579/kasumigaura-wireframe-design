@@ -382,19 +382,188 @@
             font-weight: 700;
         }
 
+        .admission-faq-section {
+            position: relative;
+            margin-top: 70px;
+            padding: 48px 42px 54px;
+            background:
+                radial-gradient(circle at 8% 12%, rgba(53, 166, 223, 0.11), transparent 21%),
+                radial-gradient(circle at 94% 38%, rgba(53, 166, 223, 0.09), transparent 18%),
+                linear-gradient(180deg, #fbfdff 0%, #f7fbff 100%);
+            border: 1px solid #e5f1fb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .admission-faq-section #faq {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            margin: 0 0 28px !important;
+            padding: 0 !important;
+            border: 0 !important;
+            color: #1185cf;
+            text-align: center !important;
+            font-size: 30px;
+            letter-spacing: 1.5px;
+        }
+
+        .admission-faq-title-icon {
+            width: 36px;
+            height: 36px;
+            stroke: currentColor;
+        }
+
+        .admission-faq-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .faq-category {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e4eef7;
+            border-radius: 18px;
+            box-shadow: 0 16px 34px rgba(30, 85, 130, 0.1);
+        }
+
+        .faq-category-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            min-height: 248px;
+            padding: 30px 24px;
+            text-align: center;
+        }
+
+        .faq-category-blue {
+            background: #edf8ff;
+        }
+
+        .faq-category-green {
+            background: #f1fae8;
+        }
+
+        .faq-category-yellow {
+            background: #fff7df;
+        }
+
+        .faq-category-panel svg {
+            width: 96px;
+            height: 96px;
+            stroke: #8ac8ee;
+        }
+
+        .faq-category-panel h4 {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            background: transparent !important;
+            color: #243242;
+            font-size: 24px !important;
+            line-height: 1.6;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .faq-items {
+            display: grid;
+            align-content: center;
+            padding: 20px 34px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e6eef5;
+        }
+
+        .faq-item:last-child {
+            border-bottom: 0;
+        }
+
+        .faq-item summary {
+            display: grid;
+            grid-template-columns: 42px 1fr 30px;
+            gap: 16px;
+            align-items: center;
+            min-height: 78px;
+            padding: 10px 0;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-q-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #35a6df;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .faq-category-green .faq-q-icon {
+            background: #6fbf4a;
+        }
+
+        .faq-category-yellow .faq-q-icon {
+            background: #e6b84e;
+        }
+
+        .faq-question {
+            display: block;
+            color: #243242;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.55;
+            letter-spacing: 0.4px;
+        }
+
+        .faq-summary {
+            display: block;
+            margin-top: 2px;
+            color: #6a7886;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        .faq-arrow {
+            color: #1185cf;
+            font-size: 24px;
+            font-weight: 800;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            margin: -2px 0 18px 58px;
+            padding: 16px 20px;
+            background: #f7fbff;
+            border-radius: 12px;
+            color: #4d5a66;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
         @media (max-width: 700px) {
-            .admission-faq-section {
-                padding: 28px 18px;
-            }
-
-            .admission-faq-section #faq {
-                font-size: 26px;
-            }
-
-            .admission-faq-section .qa-item {
-                padding: 18px;
-            }
-
             .admission-download-area {
                 padding: 32px 16px;
             }
@@ -422,6 +591,44 @@
 
             .consultation-date {
                 font-size: 28px;
+            }
+
+            .admission-faq-section {
+                padding: 32px 16px;
+            }
+
+            .admission-faq-section #faq {
+                font-size: 25px;
+            }
+
+            .faq-category {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-category-panel {
+                min-height: auto;
+                padding: 28px 18px;
+            }
+
+            .faq-items {
+                padding: 8px 20px 20px;
+            }
+
+            .faq-item summary {
+                grid-template-columns: 36px 1fr 24px;
+                gap: 10px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+            }
+
+            .faq-summary {
+                font-size: 13px;
+            }
+
+            .faq-answer {
+                margin-left: 0;
             }
         }
     </style>
@@ -760,179 +967,129 @@
         <hr />
         <!-- Section 5 -->
         <section class="course-section admission-faq-section">
-            <h2 class="course-title" id="faq"
-                style="text-align: left; border-left: 5px solid #333; padding-left: 15px;">よくあるご質問</h2>
+            <h2 class="course-title" id="faq">
+                <svg class="admission-faq-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                    <path d="M8 9h8"></path>
+                    <path d="M8 13h5"></path>
+                </svg>
+                よくあるご質問
+            </h2>
             <div class="content-block admission-faq-list">
-                <h4 style="border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.3em;">
-                    入試について知りたい</h4>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>令和７年度の入試結果を教えてください。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>オープンスクールや入試説明会等で詳細をお話しますので，ぜひ参加してみてください。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>令和７年度の推薦入試について教えてください。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>１月９日（金）英語・数学・国語（マークシート方式），グループ面接で行われます。入試結果によりコース別合格となります。推薦条件には，学業推薦，特技（スポーツ・吹奏楽）推薦，文化芸術推薦（生徒会・文化活動・ボランティア活動等）があります。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>令和７年度の一般入試について教えてください。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>１月１８日（日）英語・数学・国語・理科・社会の５科目（５００点満点）記述式で行われます。入試結果によりコース別合格となります。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>一般入試の試験会場は何ヵ所ありますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>試験会場は，本校・石岡・つくばの３会場あります。本校が中学校別に指定したそれぞれの会場で受験していただくことになります。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>学業奨学生やスポーツ奨学生制度はありますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>学業奨学生は，条件を満たしている生徒の希望者の中から，入学試験及び中学校の活動内容を総合的に判断して決定します。スポーツ奨学生は，それぞれの競技の大会等における成績や活動面を評価して決定します。条件等は，募集要項の手引きをご覧ください。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>入試の出題傾向について教えてください。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>英語・数学・国語・理科・社会とも中学校3年生の12月末までが出題範囲となります。オープンスクール・入試説明会で詳細を説明しますので，ぜひ参加してください。
-                    </p>
-                </div>
-                <h4
-                    style="border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; font-size: 1.3em;">
-                    学校生活について知りたい</h4>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>登校時間は何時ですか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>午前8時40分です。ホームルームがあります。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>土曜日の授業はありますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>1・3土曜日は登校です。学校・学年行事や模擬試験等に活用し，授業時間確保に努めています。第2・4・5土曜日は休日です。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>お昼ごはんはお弁当ですか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>お弁当を持参する生徒が多いようですが，校内でパンや飲み物を購入することもできます。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>修学旅行はいつ，どこへ行きますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>2年生の3学期に3泊4日で沖縄への修学旅行があります。美しい自然や歴史，平和の尊さについて学びます。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>心配や悩み事を聞いてくれる専門の先生はいますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>経験豊富なスクールカウンセラーがいますので，安心してください。保護者の方も利用可能です。もちろん担任の先生も親身に相談にのってくれますよ。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>制服について教えてください。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>冬服（ジャケットにネクタイ・リボン）と夏服（ボタンダウンシャツとベストまたはポロシャツ）があります。男女ともに爽やかな制服には，絶大な人気があります。詳しくは，<a
-                            href="school_life.html" style="color: #333; text-decoration: underline;">制服紹介ページ</a>をご覧ください。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>専用スクールバスは運行していますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>稲敷・美浦コース，龍ケ崎・牛久コース，つくばコース，守谷コースの４コースが運行しています。路線バスより割安です。詳しくは専用スクールバス担当までお問い合わせください。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>携帯電話（スマートフォン）は持てますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>許可を申請すれば携行を認めています。ただし，校内での使用は一切禁止です。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>学費はどのくらいかかりますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>入学手続き時に330,000円，月々42,000円（授業料・施設費等）。その他に団体費・修学旅行積立金・副教材費等がかかります。各種奨学生制度が利用可能です。
-                    </p>
-                </div>
-                <h4
-                    style="border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; font-size: 1.3em;">
-                    毎日の学習について知りたい</h4>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>何学期制ですか。定期試験は何回行われますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>3学期制をとっています。定期試験は，1・2学期は中間と期末に考査が行われ，3学期は学年末考査の1回で計5回となっています。また，コース別に実力テストや模擬試験などがあります。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>授業は何時間授業ですか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>総合進学コースは，月曜日から金曜日が５０分の６時間授業、特進選抜・特進コースは，50分の7時間授業となっています。その後部活動などに参加しています。（運動部によっては選択演習授業を受講しないことも可能です。)
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>高校の成績はどのように評価されますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>成績の評価は定期試験の結果だけではありません。授業態度や，課題などを含めて総合的に評価されます。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>授業以外の補習や，補講はありますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>夏・冬・春それぞれの休暇中には，進学補習講座が開かれています。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>授業についていけない場合は，どうしたら良いでしょう。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>教科担任の先生が，わかるまで丁寧に指導してくれますから安心してください。学習に関する個別相談もいつでもうけることができます。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>欠席日数が多くなったり，苦手科目があると進級・卒業できないのでしょうか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>進級・卒業のためには，出席日数の最低限の条件はあります。また，苦手科目があっても，一生懸命に学習に取り組む生徒に対して，先生方は必ず進級・卒業できるように指導します。わからないことがあったら，いつでも遠慮なく質問してください。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>部活と学業の両立は可能ですか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>日々の授業を大切にしていけば，十分に可能です。多くの先輩方が，部活動でも優秀な成績をおさめつつ，そのようにして希望進路を決定しています。
-                    </p>
-                </div>
-                <div class="qa-item" style="margin-bottom: 20px;">
-                    <p style="font-weight: bold; margin-bottom: 5px; color: #333;"><span
-                            style="color: #666; margin-right: 10px;">Q.</span>検定試験や，資格取得のための特別な指導はありますか。</p>
-                    <p style="padding-left: 28px; line-height: 1.6; color: #555;"><span
-                            style="color: #999; margin-left: -28px; margin-right: 10px; font-weight: bold;">A.</span>英検・漢検・数検等が，学内で実施され，毎年多数の合格者が出ています。成績優秀者は表彰されます。
-                    </p>
-                </div>
+                <article class="faq-category faq-category-blue">
+                    <div class="faq-category-panel">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+                            <path d="m15 5 3 3"></path>
+                        </svg>
+                        <h4>入試について<br>知りたい</h4>
+                    </div>
+                    <div class="faq-items">
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">推薦入試について教えてください</span><span class="faq-summary">出願条件・選考方法・合格発表日などをご案内します。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">英語・数学・国語の試験とグループ面接で行われます。入試結果によりコース別合格となります。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">一般入試の試験会場は何ヵ所ありますか</span><span class="faq-summary">本校のほか、県内外の主要都市に設置しています。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">試験会場は、本校・石岡・つくばの3会場です。本校が中学校別に指定した会場で受験していただきます。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">出題傾向について教えてください</span><span class="faq-summary">過去問をもとに、出題傾向と対策のポイントを解説します。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">英語・数学・国語・理科・社会とも、中学校3年生の12月末までが出題範囲です。説明会でも詳しくご案内します。</div>
+                        </details>
+                    </div>
+                </article>
+
+                <article class="faq-category faq-category-green">
+                    <div class="faq-category-panel">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M16 21v-2a4 4 0 0 0-8 0v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h4>学校生活について<br>知りたい</h4>
+                    </div>
+                    <div class="faq-items">
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">登校時間は何時ですか</span><span class="faq-summary">通常は8:40までに登校です。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">午前8時40分です。登校後にホームルームがあります。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">制服について教えてください</span><span class="faq-summary">男女ともに清潔感のあるデザインで、夏服・冬服があります。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">冬服はジャケットにネクタイ・リボン、夏服はボタンダウンシャツやポロシャツなどがあります。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">専用スクールバスは運行していますか</span><span class="faq-summary">土浦駅・神立駅などから運行しています。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">稲敷・美浦、龍ケ崎・牛久、つくば、守谷方面などのコースがあります。詳しくは本校へお問い合わせください。</div>
+                        </details>
+                    </div>
+                </article>
+
+                <article class="faq-category faq-category-yellow">
+                    <div class="faq-category-panel">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 7v14"></path>
+                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                        </svg>
+                        <h4>毎日の学習について<br>知りたい</h4>
+                    </div>
+                    <div class="faq-items">
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">何学期制ですか</span><span class="faq-summary">3学期制です。長期休暇には補習も実施しています。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">3学期制です。定期試験は1・2学期に中間・期末、3学期に学年末考査を行います。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">授業は何時間ですか</span><span class="faq-summary">1日6時間授業が基本です。月・水は7時間です。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">総合進学コースは月曜日から金曜日が50分の6時間授業、特進選抜・特進コースは50分の7時間授業です。</div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span class="faq-q-icon">Q</span>
+                                <span><span class="faq-question">部活と学業の両立は可能ですか</span><span class="faq-summary">時間の使い方を大切にし、両立できる環境を整えています。</span></span>
+                                <span class="faq-arrow">⌄</span>
+                            </summary>
+                            <div class="faq-answer">十分に可能です。授業を大切にしながら、部活動でも進路実現でも成果を出している生徒が多くいます。</div>
+                        </details>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
