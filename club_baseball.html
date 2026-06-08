@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>硬式野球部 | 霞ヶ浦高等学校</title>
+    <link href="style.css?v=2" rel="stylesheet" />
+    <style>
+        .club-detail-container {
+            max-width: 1320px;
+            width: calc(100% - 48px);
+            margin: 0 auto;
+        }
+
+        .club-detail-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+            gap: 46px;
+            align-items: center;
+            padding: 72px 0 64px;
+        }
+
+        .club-detail-eyebrow {
+            margin: 0 0 10px;
+            color: #35a6df;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+        }
+
+        .club-detail-title {
+            margin: 0 0 22px;
+            color: #172534;
+            font-size: 48px;
+            line-height: 1.18;
+            letter-spacing: 1px;
+        }
+
+        .club-detail-lead {
+            margin: 0;
+            color: #26384a;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.9;
+        }
+
+        .club-detail-photo {
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
+                linear-gradient(45deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
+                #d9dde1;
+        }
+
+        .club-detail-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .club-detail-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 18px;
+            border-radius: 999px;
+            background: #2183b8;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .club-detail-link.secondary {
+            background: #edf6fb;
+            color: #2183b8;
+        }
+
+        .club-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin: 0 0 70px;
+        }
+
+        .club-detail-card {
+            padding: 30px;
+            border: 1px solid #dcecf7;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .club-detail-card.wide {
+            grid-column: 1 / -1;
+        }
+
+        .club-detail-card h2 {
+            margin: 0 0 18px;
+            color: #172534;
+            font-size: 24px;
+            line-height: 1.45;
+        }
+
+        .club-detail-card p,
+        .club-detail-card li {
+            color: #334354;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .club-detail-card p {
+            margin: 0;
+        }
+
+        .club-detail-card ul {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding-left: 1.2em;
+        }
+
+        .club-detail-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin: 0 0 70px;
+        }
+
+        .club-detail-stat {
+            padding: 28px;
+            border-radius: 8px;
+            background: #edf8ff;
+            text-align: center;
+        }
+
+        .club-detail-stat strong {
+            display: block;
+            color: #2183b8;
+            font-size: 44px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .club-detail-stat span {
+            color: #26384a;
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .club-detail-hero,
+            .club-detail-grid,
+            .club-detail-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .club-detail-hero {
+                padding-top: 48px;
+            }
+
+            .club-detail-title {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .club-detail-container {
+                width: calc(100% - 32px);
+            }
+
+            .club-detail-card {
+                padding: 22px;
+            }
+
+            .club-detail-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="modern-header-container">
+            <div class="logo-container">
+                <a class="modern-logo" href="index.html">霞ヶ浦高等学校</a>
+            </div>
+            <a class="modern-logo" href="club.html" style="font-size: 14px;">部活動一覧へ</a>
+        </div>
+    </header>
+
+    <main class="club-detail-container">
+        <section class="club-detail-hero">
+            <div>
+                <p class="club-detail-eyebrow">Sports Clubs</p>
+                <h1 class="club-detail-title">硬式野球部</h1>
+                <p class="club-detail-lead">「人間的成長なくして技術の進歩なし」を信条に、グラウンドでの野球技術向上だけでなく、学校生活も自覚と責任を持って取り組んでいます。</p>
+                <div class="club-detail-nav">
+                    <a class="club-detail-link" href="#record">主な実績</a>
+                    <a class="club-detail-link secondary" href="club.html#sports">運動部一覧へ</a>
+                </div>
+            </div>
+            <div class="club-detail-photo" aria-label="硬式野球部の写真枠"></div>
+        </section>
+
+        <section class="club-detail-stats" aria-label="硬式野球部の実績概要">
+            <div class="club-detail-stat">
+                <strong>3</strong>
+                <span>全国高等学校野球選手権大会 出場</span>
+            </div>
+            <div class="club-detail-stat">
+                <strong>9</strong>
+                <span>2015年〜2024年に誕生したプロ野球選手</span>
+            </div>
+        </section>
+
+        <section class="club-detail-grid">
+            <article class="club-detail-card" id="record">
+                <h2>2024年度の主な実績</h2>
+                <ul>
+                    <li>第106回全国高等学校野球選手権茨城県大会　優勝</li>
+                    <li>第106回全国高等学校野球選手権大会　ベスト16</li>
+                    <li>第77回秋季関東地区高等学校野球茨城県大会　準優勝</li>
+                </ul>
+            </article>
+
+            <article class="club-detail-card">
+                <h2>最新成績</h2>
+                <p>第107回全国高等学校野球選手権茨城県大会　ベスト8</p>
+            </article>
+
+            <article class="club-detail-card wide">
+                <h2>硬式野球部について</h2>
+                <p>第97・101・106回全国高等学校野球選手権大会で3回出場を果たしました。また、2015年〜2024年の間に9人のプロ野球選手が誕生しています。甲子園ベスト8を目標に、学校生活やスポーツマンとしての人間的成長を目的に毎日の練習に取り組んでいます。</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <div class="footer-school-info">
+                    <p>学校法人 霞ヶ浦高等学校</p>
+                    <p>〒300-0301 茨城県稲敷郡阿見町青宿50番地</p>
+                    <p>TEL: 029-887-0013 / 4755　FAX: 029-887-9380</p>
+                </div>
+                <p class="copyright">&copy; 霞ヶ浦高等学校 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
