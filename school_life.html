@@ -17,9 +17,9 @@
     }
 
     #annual-events .image-placeholder {
-        height: 236px;
+        height: 220px;
         border: 0;
-        border-radius: 8px;
+        border-radius: 4px;
         background:
             linear-gradient(135deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
             linear-gradient(45deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
@@ -28,102 +28,66 @@
 
     #annual-events .calendar-grid {
         grid-template-columns: repeat(6, minmax(0, 1fr));
-        gap: 22px 18px;
-        margin-top: 34px;
+        gap: 18px;
+        margin-top: 30px;
     }
 
     #annual-events .month-box {
-        --event-color: #35a6df;
-        --event-soft: #edf8ff;
         position: relative;
-        min-height: 214px;
-        padding: 24px 14px 20px;
+        min-height: 204px;
+        padding: 20px 14px 18px;
         border: 0;
-        border-radius: 8px;
-        background:
-            linear-gradient(90deg, var(--event-color) 0 8px, transparent 8px 100%),
-            linear-gradient(180deg, var(--event-soft) 0%, #ffffff 72%);
+        border-radius: 6px;
+        background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
         text-align: center;
         overflow: hidden;
-        box-shadow: 0 14px 28px rgba(34, 71, 104, 0.08);
-    }
-
-    #annual-events .month-box:nth-child(3n + 2) {
-        --event-color: #70b96a;
-        --event-soft: #f2fbef;
-    }
-
-    #annual-events .month-box:nth-child(3n) {
-        --event-color: #e5b95b;
-        --event-soft: #fff8e8;
     }
 
     #annual-events .month-box::before {
         content: "";
         position: absolute;
-        top: 14px;
-        right: 14px;
-        width: 38px;
-        height: 38px;
-        border: 1px solid color-mix(in srgb, var(--event-color) 35%, transparent);
-        border-radius: 50%;
-        opacity: 0.55;
+        inset: 0 0 auto;
+        height: 5px;
+        background: #35a6df;
+    }
+
+    #annual-events .month-box:nth-child(3n + 2)::before {
+        background: #70b96a;
+    }
+
+    #annual-events .month-box:nth-child(3n)::before {
+        background: #e5b95b;
     }
 
     #annual-events .month-name {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        margin: 0 auto 10px;
-        border-radius: 50%;
-        background: #fff;
         color: #1f3347;
         font-size: 32px;
         font-weight: 800;
         line-height: 1;
-        box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--event-color) 28%, transparent);
+        margin-bottom: 7px;
     }
 
     #annual-events .month-en {
         display: inline-block;
-        margin-bottom: 20px;
-        padding: 4px 12px;
-        border: 1px solid color-mix(in srgb, var(--event-color) 32%, transparent);
-        border-radius: 999px;
-        color: var(--event-color);
+        margin-bottom: 18px;
+        padding: 0 0 10px;
+        border-bottom: 1px solid #d8e6f0;
+        color: #35a6df;
         font-size: 13px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 0.6px;
-        background: rgba(255, 255, 255, 0.74);
     }
 
     #annual-events .event-list {
         display: grid;
-        gap: 8px;
+        gap: 7px;
         color: #26384a;
         font-size: 14px;
         line-height: 1.55;
-        text-align: left;
     }
 
     #annual-events .event-list li {
-        position: relative;
         margin: 0;
-        padding-left: 14px;
-    }
-
-    #annual-events .event-list li::before {
-        content: "";
-        position: absolute;
-        top: 0.72em;
-        left: 0;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: var(--event-color);
-        transform: translateY(-50%);
     }
 
     @media (max-width: 1100px) {
@@ -153,19 +117,6 @@
 
         #annual-events .month-box {
             min-height: 0;
-            padding: 22px 22px 20px;
-        }
-
-        #annual-events .event-list {
-            text-align: center;
-        }
-
-        #annual-events .event-list li {
-            padding-left: 0;
-        }
-
-        #annual-events .event-list li::before {
-            display: none;
         }
     }
 </style>
