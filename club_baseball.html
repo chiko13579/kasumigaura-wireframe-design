@@ -14,6 +14,19 @@
             margin: 0 auto;
         }
 
+        .club-detail-main {
+            position: relative;
+        }
+
+        .club-detail-main::before {
+            content: "";
+            position: absolute;
+            inset: 96px calc(50% - 50vw) auto;
+            height: 360px;
+            background: #f2f9fd;
+            z-index: -1;
+        }
+
         .club-detail-hero {
             display: grid;
             grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
@@ -23,7 +36,10 @@
         }
 
         .club-detail-eyebrow {
-            margin: 0 0 10px;
+            display: inline-block;
+            margin: 0 0 12px;
+            padding: 0 0 8px;
+            border-bottom: 2px solid #35a6df;
             color: #35a6df;
             font-size: 15px;
             font-weight: 800;
@@ -47,12 +63,28 @@
         }
 
         .club-detail-photo {
+            position: relative;
             aspect-ratio: 16 / 9;
             border-radius: 8px;
             background:
                 linear-gradient(135deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
                 linear-gradient(45deg, transparent 0 49%, rgba(255, 255, 255, 0.36) 49% 51%, transparent 51% 100%),
                 #d9dde1;
+            overflow: hidden;
+        }
+
+        .club-detail-photo::after {
+            content: "KASUMIGAURA BASEBALL";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 18px 22px;
+            background: rgba(23, 37, 52, 0.82);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
         }
 
         .club-detail-nav {
@@ -88,10 +120,20 @@
         }
 
         .club-detail-card {
+            position: relative;
             padding: 30px;
             border: 1px solid #dcecf7;
             border-radius: 8px;
             background: #fff;
+            overflow: hidden;
+        }
+
+        .club-detail-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 5px;
+            background: #35a6df;
         }
 
         .club-detail-card.wide {
@@ -131,10 +173,23 @@
         }
 
         .club-detail-stat {
+            position: relative;
             padding: 28px;
             border-radius: 8px;
-            background: #edf8ff;
+            background: linear-gradient(180deg, #edf8ff 0%, #ffffff 100%);
             text-align: center;
+            overflow: hidden;
+        }
+
+        .club-detail-stat::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 58px;
+            height: 58px;
+            border: 1px solid rgba(53, 166, 223, 0.28);
+            border-radius: 50%;
         }
 
         .club-detail-stat strong {
@@ -192,7 +247,7 @@
         </div>
     </header>
 
-    <main class="club-detail-container">
+    <main class="club-detail-container club-detail-main">
         <section class="club-detail-hero">
             <div>
                 <p class="club-detail-eyebrow">Sports Clubs</p>
