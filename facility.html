@@ -48,34 +48,7 @@
     }
 
     .facility-panel {
-        border: 1px solid #d8e9f6;
-        border-radius: 16px;
-        background: #fff;
-        overflow: hidden;
-    }
-
-    .facility-panel-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 74px;
-        padding: 20px 24px;
-        background: #2183b8;
-        color: #fff;
-    }
-
-    .facility-panel-title h3 {
-        margin: 0;
-        color: inherit;
-        font-size: 24px;
-        letter-spacing: 1px;
-    }
-
-    .facility-panel-title span {
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 1.8px;
+        background: transparent;
     }
 
     .facility-card-grid {
@@ -106,9 +79,8 @@
         position: relative;
         min-height: 0;
         padding: 0;
-        border: 1px solid #dcecf7;
-        border-radius: 12px;
-        background: #fff;
+        border: 0;
+        background: transparent;
         overflow: hidden;
     }
 
@@ -126,7 +98,9 @@
     .facility-card-title {
         display: flex;
         align-items: center;
+        justify-content: center;
         min-height: 28px;
+        text-align: center;
     }
 
     .facility-photo {
@@ -191,19 +165,6 @@
             font-size: 12px;
         }
 
-        .facility-panel-title {
-            display: block;
-            padding: 18px;
-        }
-
-        .facility-panel-title h3 {
-            font-size: 21px;
-        }
-
-        .facility-panel-title span {
-            display: block;
-            margin-top: 6px;
-        }
     }
 </style>
 </head>
@@ -337,10 +298,6 @@
     <div class="facility-overview" aria-label="霞ヶ浦高等学校の施設案内">
         <p class="facility-overview-lead">規模、内容ともに充実。勉学にスポーツに最適な環境が整備されています。</p>
         <div class="facility-panel">
-            <div class="facility-panel-title">
-                <h3>施設案内</h3>
-                <span>Campus Facilities</span>
-            </div>
             <div class="facility-card-grid is-main">
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="学習センターの写真枠"></div>
