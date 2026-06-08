@@ -106,20 +106,19 @@
 
     .facility-card-body {
         position: relative;
-        min-height: 118px;
-        padding: 16px 52px 18px 18px;
+        min-height: 64px;
+        padding: 18px;
     }
 
     .facility-card.is-compact .facility-card-body {
-        min-height: 118px;
+        min-height: 58px;
         padding: 12px 12px 16px;
     }
 
     .facility-card-title {
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
+        min-height: 28px;
     }
 
     .facility-photo {
@@ -135,20 +134,6 @@
         height: 112px;
     }
 
-    .facility-number {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 28px;
-        height: 24px;
-        border-radius: 4px;
-        background: #2d79d6;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 800;
-        line-height: 1;
-    }
-
     .facility-card h4 {
         margin: 0;
         color: #2467b6;
@@ -158,35 +143,6 @@
 
     .facility-card.is-compact h4 {
         font-size: 13px;
-    }
-
-    .facility-card p {
-        margin: 0;
-        color: #5c6b78;
-        font-size: 13px;
-        line-height: 1.65;
-    }
-
-    .facility-card.is-compact p {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .facility-card-arrow {
-        position: absolute;
-        right: 18px;
-        bottom: 18px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        border: 1px solid #8bbdec;
-        border-radius: 50%;
-        color: #2d79d6;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1;
     }
 
     @media (max-width: 600px) {
@@ -384,49 +340,37 @@
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="学習センターの写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">01</span><h4>学習センター</h4></div>
-                        <p>自習やグループ学習に最適な空間。静かな環境で集中して学習に取り組めます。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>学習センター</h4></div>
                     </div>
                 </article>
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="第2グラウンドとテニスコートの写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">02</span><h4>第2グラウンド / テニスコート</h4></div>
-                        <p>広々としたグラウンドとテニスコートを完備。のびのびと体を動かせます。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>第2グラウンド / テニスコート</h4></div>
                     </div>
                 </article>
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="大室グラウンドとクラブハウスの写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">03</span><h4>大室グラウンド / クラブハウス</h4></div>
-                        <p>人工芝のグラウンドとクラブハウスを完備。部活動の拠点として利用されています。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>大室グラウンド / クラブハウス</h4></div>
                     </div>
                 </article>
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="室内練習場の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">04</span><h4>室内練習場（野球部）</h4></div>
-                        <p>天候に左右されず練習できる室内練習場。最新の設備で効率的に技術を磨けます。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>室内練習場（野球部）</h4></div>
                     </div>
                 </article>
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="総合体育館の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">05</span><h4>総合体育館</h4></div>
-                        <p>体育の授業や部活動、各種イベントで使用する多目的体育施設です。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>総合体育館</h4></div>
                     </div>
                 </article>
                 <article class="facility-card">
                     <div class="facility-photo" aria-label="第1グラウンドの写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">06</span><h4>第1グラウンド</h4></div>
-                        <p>体育の授業や部活動で使用するグラウンド。様々なスポーツに対応しています。</p>
-                        <span class="facility-card-arrow" aria-hidden="true">›</span>
+                        <div class="facility-card-title"><h4>第1グラウンド</h4></div>
                     </div>
                 </article>
             </div>
@@ -434,50 +378,43 @@
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="LL教室の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">07</span><h4>LL教室</h4></div>
-                        <p>少人数での学習や語学の授業に適した教室です。</p>
+                        <div class="facility-card-title"><h4>LL教室</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="調理室の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">08</span><h4>調理室</h4></div>
-                        <p>調理実習や食育活動で使用する設備の整った調理室です。</p>
+                        <div class="facility-card-title"><h4>調理室</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="事務室の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">09</span><h4>事務室</h4></div>
-                        <p>生徒の各種手続きや相談に対応する窓口です。</p>
+                        <div class="facility-card-title"><h4>事務室</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="部室棟の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">10</span><h4>部室棟</h4></div>
-                        <p>各部活動の拠点となる部室棟。充実した環境で活動できます。</p>
+                        <div class="facility-card-title"><h4>部室棟</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="音楽ホールの写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">11</span><h4>音楽ホール</h4></div>
-                        <p>音楽の授業や部活動で使用するホールです。</p>
+                        <div class="facility-card-title"><h4>音楽ホール</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="コンピュータ室の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">12</span><h4>コンピュータ室</h4></div>
-                        <p>最新のパソコンを備えたICT学習の拠点です。</p>
+                        <div class="facility-card-title"><h4>コンピュータ室</h4></div>
                     </div>
                 </article>
                 <article class="facility-card is-compact">
                     <div class="facility-photo" aria-label="図書室の写真枠"></div>
                     <div class="facility-card-body">
-                        <div class="facility-card-title"><span class="facility-number">13</span><h4>図書室</h4></div>
-                        <p>多くの蔵書と静かな環境で、読書や学習ができます。</p>
+                        <div class="facility-card-title"><h4>図書室</h4></div>
                     </div>
                 </article>
             </div>
