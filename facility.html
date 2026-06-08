@@ -89,9 +89,17 @@
     }
 
     .facility-card-grid.is-sub {
-        grid-template-columns: repeat(7, minmax(0, 1fr));
+        grid-template-columns: repeat(12, minmax(0, 1fr));
         gap: 14px;
         padding-top: 0;
+    }
+
+    .facility-card-grid.is-sub .facility-card {
+        grid-column: span 3;
+    }
+
+    .facility-card-grid.is-sub .facility-card:nth-child(n + 5) {
+        grid-column: span 4;
     }
 
     .facility-card {
@@ -171,6 +179,11 @@
         .facility-card-grid.is-main,
         .facility-card-grid.is-sub {
             grid-template-columns: 1fr;
+        }
+
+        .facility-card-grid.is-sub .facility-card,
+        .facility-card-grid.is-sub .facility-card:nth-child(n + 5) {
+            grid-column: auto;
         }
 
         .facility-photo,
