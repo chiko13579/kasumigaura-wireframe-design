@@ -119,6 +119,123 @@
             min-height: 0;
         }
     }
+
+    #daily_schedule .daily-timeline {
+        position: relative;
+        max-width: 1120px;
+        margin: 0 auto 80px;
+    }
+
+    #daily_schedule .daily-timeline::before {
+        content: "";
+        position: absolute;
+        left: 100px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ddd;
+    }
+
+    #daily_schedule .daily-item {
+        display: grid;
+        grid-template-columns: 100px minmax(0, 1fr);
+        gap: 40px;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    #daily_schedule .daily-item:last-child {
+        margin-bottom: 0;
+    }
+
+    #daily_schedule .daily-time {
+        position: relative;
+        padding-top: 4px;
+        text-align: right;
+    }
+
+    #daily_schedule .daily-time strong {
+        display: block;
+        color: #1f1f1f;
+        font-size: 1.3em;
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+
+    #daily_schedule .daily-time span {
+        color: #888;
+        font-size: 0.88em;
+        font-weight: 700;
+    }
+
+    #daily_schedule .daily-time::after {
+        content: "";
+        position: absolute;
+        right: -9px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #111;
+    }
+
+    #daily_schedule .daily-content {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1fr);
+        gap: 28px;
+        padding-left: 30px;
+        align-items: start;
+    }
+
+    #daily_schedule .daily-label {
+        margin: 0 0 4px;
+        color: #888;
+        font-size: 0.8em;
+        letter-spacing: 3px;
+    }
+
+    #daily_schedule .daily-content h4 {
+        margin: 0 0 12px;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    #daily_schedule .daily-content p:not(.daily-label) {
+        margin: 0;
+        line-height: 1.85;
+    }
+
+    #daily_schedule .daily-photo {
+        height: 200px;
+        margin: 0;
+    }
+
+    @media (max-width: 760px) {
+        #daily_schedule .daily-timeline::before {
+            left: 72px;
+        }
+
+        #daily_schedule .daily-item {
+            grid-template-columns: 72px minmax(0, 1fr);
+            gap: 24px;
+            margin-bottom: 46px;
+        }
+
+        #daily_schedule .daily-content {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding-left: 18px;
+        }
+
+        #daily_schedule .daily-photo {
+            height: 180px;
+        }
+
+        #daily_schedule .daily-time strong {
+            font-size: 1.05em;
+        }
+    }
 </style>
 </head>
 <body>
@@ -397,75 +514,77 @@
     </div>
 
     <!-- C: タイムライン -->
-    <div style="position: relative; max-width: 900px; margin: 0 auto 80px;">
-        <!-- 縦ライン -->
-        <div style="position: absolute; left: 100px; top: 0; bottom: 0; width: 2px; background-color: #ddd;"></div>
-
-        <!-- 8:40 朝のHR -->
-        <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-            <div style="flex: 0 0 100px; text-align: right; padding-top: 4px; position: relative;">
-                <span style="font-size: 1.3em; font-weight: bold; letter-spacing: 1px;">8:40</span>
-                <div style="position: absolute; right: -9px; top: 8px; width: 16px; height: 16px; background-color: #111; border-radius: 50%;"></div>
+    <div class="daily-timeline">
+        <div class="daily-item">
+            <div class="daily-time">
+                <strong>8:40</strong>
             </div>
-            <div style="flex: 1; padding-left: 30px;">
-                <p style="font-size: 0.8em; letter-spacing: 3px; color: #888; margin-bottom: 4px;">MORNING HR</p>
-                <h4 style="font-size: 1.2em; font-weight: bold; text-align: left; margin: 0 0 10px;">朝のHR</h4>
-                <p style="margin-bottom: 15px;">朝練をしてから教室へ、HRを受けて一日スタート！週によっては単語テストもあります！</p>
-                <div class="image-placeholder" style="height: 200px;"></div>
+            <div class="daily-content">
+                <div class="daily-text">
+                    <p class="daily-label">MORNING HR</p>
+                    <h4>朝のHR</h4>
+                    <p>朝練をしてから教室へ、HRを受けて一日スタート！週によっては単語テストもあります！</p>
+                </div>
+                <div class="image-placeholder daily-photo"></div>
             </div>
         </div>
 
-        <!-- 8:50〜12:40 午前の授業 -->
-        <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-            <div style="flex: 0 0 100px; text-align: right; padding-top: 4px; position: relative;">
-                <span style="font-size: 1.1em; font-weight: bold; letter-spacing: 0;">8:50<br/><span style="font-size: 0.8em; color: #888;">〜12:40</span></span>
-                <div style="position: absolute; right: -9px; top: 8px; width: 16px; height: 16px; background-color: #111; border-radius: 50%;"></div>
+        <div class="daily-item">
+            <div class="daily-time">
+                <strong>8:50</strong>
+                <span>〜12:40</span>
             </div>
-            <div style="flex: 1; padding-left: 30px;">
-                <p style="font-size: 0.8em; letter-spacing: 3px; color: #888; margin-bottom: 4px;">MORNING CLASS</p>
-                <h4 style="font-size: 1.2em; font-weight: bold; text-align: left; margin: 0 0 10px;">午前の授業</h4>
-                <p style="margin-bottom: 15px;">高校の授業はついていくのが大変！予習よりも復習を大切にしています。2年次には文理選択・コース変更が可能です！</p>
-                <div class="image-placeholder" style="height: 200px;"></div>
-            </div>
-        </div>
-
-        <!-- 12:40〜13:20 ランチタイム -->
-        <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-            <div style="flex: 0 0 100px; text-align: right; padding-top: 4px; position: relative;">
-                <span style="font-size: 1.1em; font-weight: bold;">12:40<br/><span style="font-size: 0.8em; color: #888;">〜13:20</span></span>
-                <div style="position: absolute; right: -9px; top: 8px; width: 16px; height: 16px; background-color: #111; border-radius: 50%;"></div>
-            </div>
-            <div style="flex: 1; padding-left: 30px;">
-                <p style="font-size: 0.8em; letter-spacing: 3px; color: #888; margin-bottom: 4px;">LUNCH TIME</p>
-                <h4 style="font-size: 1.2em; font-weight: bold; text-align: left; margin: 0 0 10px;">ランチタイム</h4>
-                <p style="margin-bottom: 15px;">キッチンカーもあるし、購買もあるし、ランチタイムはいつも悩む・・・。キッチンカーは放課後も出ています！</p>
-                <div class="image-placeholder" style="height: 200px;"></div>
+            <div class="daily-content">
+                <div class="daily-text">
+                    <p class="daily-label">MORNING CLASS</p>
+                    <h4>午前の授業</h4>
+                    <p>高校の授業はついていくのが大変！予習よりも復習を大切にしています。2年次には文理選択・コース変更が可能です！</p>
+                </div>
+                <div class="image-placeholder daily-photo"></div>
             </div>
         </div>
 
-        <!-- 13:20〜16:20 午後の授業 -->
-        <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-            <div style="flex: 0 0 100px; text-align: right; padding-top: 4px; position: relative;">
-                <span style="font-size: 1.1em; font-weight: bold;">13:20<br/><span style="font-size: 0.8em; color: #888;">〜16:20</span></span>
-                <div style="position: absolute; right: -9px; top: 8px; width: 16px; height: 16px; background-color: #111; border-radius: 50%;"></div>
+        <div class="daily-item">
+            <div class="daily-time">
+                <strong>12:40</strong>
+                <span>〜13:20</span>
             </div>
-            <div style="flex: 1; padding-left: 30px;">
-                <p style="font-size: 0.8em; letter-spacing: 3px; color: #888; margin-bottom: 4px;">AFTERNOON CLASS</p>
-                <h4 style="font-size: 1.2em; font-weight: bold; text-align: left; margin: 0 0 10px;">午後の授業</h4>
-                <p style="margin-bottom: 0;">午後は、進路集会があります。将来の目標や夢について考える時間は多めです。また、6限までだと15:20、7限だと16:20までです。</p>
+            <div class="daily-content">
+                <div class="daily-text">
+                    <p class="daily-label">LUNCH TIME</p>
+                    <h4>ランチタイム</h4>
+                    <p>キッチンカーもあるし、購買もあるし、ランチタイムはいつも悩む・・・。キッチンカーは放課後も出ています！</p>
+                </div>
+                <div class="image-placeholder daily-photo"></div>
             </div>
         </div>
 
-        <!-- 16:20〜 放課後 -->
-        <div style="display: flex; gap: 40px; align-items: flex-start;">
-            <div style="flex: 0 0 100px; text-align: right; padding-top: 4px; position: relative;">
-                <span style="font-size: 1.3em; font-weight: bold;">16:20〜</span>
-                <div style="position: absolute; right: -9px; top: 8px; width: 16px; height: 16px; background-color: #111; border-radius: 50%;"></div>
+        <div class="daily-item">
+            <div class="daily-time">
+                <strong>13:20</strong>
+                <span>〜16:20</span>
             </div>
-            <div style="flex: 1; padding-left: 30px;">
-                <p style="font-size: 0.8em; letter-spacing: 3px; color: #888; margin-bottom: 4px;">AFTER SCHOOL</p>
-                <h4 style="font-size: 1.2em; font-weight: bold; text-align: left; margin: 0 0 10px;">放課後</h4>
-                <p style="margin-bottom: 0;">放課後は部活へGO！コースによっては補習があります。部活後は学習センターで課題を進めます。学習センターは２０時まで開放しているから便利！</p>
+            <div class="daily-content">
+                <div class="daily-text">
+                    <p class="daily-label">AFTERNOON CLASS</p>
+                    <h4>午後の授業</h4>
+                    <p>午後は、進路集会があります。将来の目標や夢について考える時間は多めです。また、6限までだと15:20、7限だと16:20までです。</p>
+                </div>
+                <div class="image-placeholder daily-photo"></div>
+            </div>
+        </div>
+
+        <div class="daily-item">
+            <div class="daily-time">
+                <strong>16:20〜</strong>
+            </div>
+            <div class="daily-content">
+                <div class="daily-text">
+                    <p class="daily-label">AFTER SCHOOL</p>
+                    <h4>放課後</h4>
+                    <p>放課後は部活へGO！コースによっては補習があります。部活後は学習センターで課題を進めます。学習センターは２０時まで開放しているから便利！</p>
+                </div>
+                <div class="image-placeholder daily-photo"></div>
             </div>
         </div>
     </div>
